@@ -30,3 +30,9 @@ En este otro apartado, se incluye otra lista de los casos de prueba para comprob
 12. **Test Género No Válido**: El sistema lanza una excepción para entradas de género que no sean "H" (hombre) o "M" (mujer).
 13. **Test Metabolismo Basal Mujer**: Cálculo correcto del metabolismo basal para una mujer.
 14. **Test Metabolismo Basal Hombre**: Cálculo correcto del metabolismo basal para un hombre.
+
+## Resultado de los test
+
+Por último, añado una captura de mi consola en la que se puede observar que todos los test mencionados anteriormente se ejecutaron correctamente.
+
+![Resultado de los Tests]("C:\Users\julia\OneDrive\Escritorio\UNIVERSIDAD\TERCERO\INGENIERÍA DEL SOFTWARE AVANZADA\isa2024-healthcalc\resultadoTests.png")
