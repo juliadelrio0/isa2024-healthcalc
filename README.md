@@ -33,6 +33,13 @@ En este otro apartado, se incluye otra lista de los casos de prueba para comprob
 
 ## Resultado de los test
 
-Por último, añado una captura de mi consola en la que se puede observar que todos los test mencionados anteriormente se ejecutaron correctamente.
+En este apartado, voy a añadir una captura de mi consola en la que se puede observar que todos los test mencionados anteriormente se ejecutaron correctamente.
 
 ![Resultado de los tests](/resultadoTests.jpg)
+
+## Registro de commits
+
+Por último, tal y como se nos pide en la última parte de la práctica, adjunto una imagen donde podemos ver el registro de los commits que he realizado durante el desarrollo de dicha práctica.
+Cabe destacar que hay más commits de la cuenta para insertar la primera imagen puesto que no me salía bien y lo he intentado muchas veces.
+
+![Registro de los commits](/registroCommits.jpg)
