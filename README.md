@@ -35,4 +35,4 @@ En este otro apartado, se incluye otra lista de los casos de prueba para comprob
 
 Por último, añado una captura de mi consola en la que se puede observar que todos los test mencionados anteriormente se ejecutaron correctamente.
 
-![Resultado de los Tests](C:\Users\julia\OneDrive\Escritorio\UNIVERSIDAD\TERCERO\INGENIERÍA DEL SOFTWARE AVANZADA\isa2024-healthcalc\resultadoTests.png)
+![Resultado de los Tests](/resultadoTests.png)
