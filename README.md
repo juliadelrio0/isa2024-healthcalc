@@ -35,4 +35,4 @@ En este otro apartado, se incluye otra lista de los casos de prueba para comprob
 
 Por último, añado una captura de mi consola en la que se puede observar que todos los test mencionados anteriormente se ejecutaron correctamente.
 
-!["Resultado de los tests"](/resultadoTests.png)
+![Resultado de los tests](/resultadoTests.jpg)
