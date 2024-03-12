@@ -17,7 +17,7 @@ public class HealthCalcTest {
 	@DisplayName("Test Altura Negativa")
 	public void testAlturaNegativa() {
 		assertThrows(IllegalArgumentException.class,
-		() -> calc.idealBodyWeight(-8, 'h'),
+		() -> calc.idealWeight(-8, 'h'),
 		"La altura no puede ser un número negativo.");
 	}
 
@@ -25,7 +25,7 @@ public class HealthCalcTest {
 	@DisplayName("Test Altura Cero")
 	public void testAlturaCero() {
 		assertThrows(IllegalArgumentException.class,
-		() -> calc.idealBodyWeight(0, 'h'),
+		() -> calc.idealWeight(0, 'h'),
 		"La altura no puede ser cero.");
 	}
 
@@ -33,7 +33,7 @@ public class HealthCalcTest {
 	@DisplayName("Test Peso Ideal Negativo")
 	public void testPesoIdealNegativo() {
 		assertThrows(IllegalArgumentException.class,
-		() -> calc.idealBodyWeight(50, 'h'),
+		() -> calc.idealWeight(50, 'h'),
 		"El peso tiene que ser un valor positivo.");
 	}
 
@@ -41,7 +41,7 @@ public class HealthCalcTest {
 	@DisplayName("Test Altura Máxima Permitida")
 	public void testAlturaMaximaPermitida() {
 		assertThrows(IllegalArgumentException.class,
-		() -> calc.idealBodyWeight(Integer.MAX_VALUE, 'h'),
+		() -> calc.idealWeight(Integer.MAX_VALUE, 'h'),
 		"El valor de altura introducido es demasiado gande.");
 	}
 
@@ -49,7 +49,7 @@ public class HealthCalcTest {
 	@DisplayName("Test Género No Válido")
 	public void testGeneroNoValido() {
 		assertThrows(IllegalArgumentException.class,
-		() -> calc.idealBodyWeight(180, 'w'),
+		() -> calc.idealWeight(180, 'w'),
 		"Los valores posibles de género son: 'h' (hombre) o 'm' (mujer).");
 	}
 
@@ -59,7 +59,7 @@ public class HealthCalcTest {
 		int altura = 180;
 		char genero = 'h';
 		float pesoIdeal = altura - 100 - (altura-150) / 4f;
-		assertEquals(pesoIdeal, calc.idealBodyWeight(altura, genero),
+		assertEquals(pesoIdeal, calc.idealWeight(altura, genero),
 		"El cálculo no es correcto.");
 	}
 
@@ -69,7 +69,7 @@ public class HealthCalcTest {
 		int altura = 190;
 		char genero = 'm';
 		float pesoIdeal = altura - 100 - (altura-150) / 2.5f;
-		assertEquals(pesoIdeal, calc.idealBodyWeight(altura, genero),
+		assertEquals(pesoIdeal, calc.idealWeight(altura, genero),
 		"El cálculo no es correcto.");
 	}
 
