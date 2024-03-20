@@ -1,6 +1,8 @@
 # HEALTH CALCULATOR JULIA DEL RÍO
 
-## Tests método 'HealthCalcImpl.idealWeight'
+## PRÁCTICA 1
+
+### Tests método 'HealthCalcImpl.idealWeight'
 
 A continuación, inserto una enumerción de los casos de prueba que he considerado convenientes realizar para comprobar el correcto funcionamiento del método idealWeight.
 
@@ -12,7 +14,7 @@ A continuación, inserto una enumerción de los casos de prueba que he considera
 6. **Test Peso Ideal Hombre**: Comprueba el cálculo correcto del peso ideal basándose en la fórmula para el género masculino y confirmando que el resultado coincide con el esperado.
 7. **Test Peso Ideal Mujer**: Este test sirve para lo mismo que el anterior solo que ahora estudiamos el caso del género femenino.
 
-## Tests método 'HealthCalcImpl.basalMetabolicRate'
+### Tests método 'HealthCalcImpl.basalMetabolicRate'
 
 En este otro apartado, se incluye otra lista de los casos de prueba para comprobar el funcionamiento del método basalMetabolicRate.
 
@@ -31,15 +33,24 @@ En este otro apartado, se incluye otra lista de los casos de prueba para comprob
 13. **Test Metabolismo Basal Mujer**: Cálculo correcto del metabolismo basal para una mujer.
 14. **Test Metabolismo Basal Hombre**: Cálculo correcto del metabolismo basal para un hombre.
 
-## Resultado de los test
+### Resultado de los test
 
 En este apartado, voy a añadir una captura de mi consola en la que se puede observar que todos los test mencionados anteriormente se ejecutaron correctamente.
 
 ![Resultado de los tests](/resultadoTests.jpg)
 
-## Registro de commits
+### Registro de commits
 
 Por último, tal y como se nos pide en la última parte de la práctica, adjunto una imagen donde podemos ver el registro de los commits que he realizado durante el desarrollo de dicha práctica.
 Cabe destacar que hay más commits de la cuenta para insertar la primera imagen puesto que no me salía bien y lo he intentado muchas veces.
 
 ![Registro de los commits](/registroCommits.jpg)
+
+
+## PRÁCTICA 2
+
+### Diagrama Casos de Uso
+
+A continuación, insertamos una imagen en la que se representa un diagrama de casos de uso de este proyecto.
+
+![Diagrama de Casos de Uso](doc/pract2CasosUso.png)
