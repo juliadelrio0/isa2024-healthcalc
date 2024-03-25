@@ -89,7 +89,9 @@ A continuación, insertamos una imagen en la que se representa un diagrama de ca
 __HISTORIA DE USUARIO 1: Cálculo del Índice de Masa Corporal (IMC)__
 
 Como usuario interesado en conocer mi estado de salud relacionado con mi peso y altura
+
 Quiero poder calcular mi Índice de Masa Corporal (IMC) utilizando la calculadora de salud
+
 Para entender si mi peso está dentro de un rango saludable según mi altura
 
 Escenarios de aceptación:
@@ -101,7 +103,9 @@ Escenarios de aceptación:
 __HISTORIA DE USUARIO 2: Cálculo de ingesta calórica diaria recomendada__
 
 Como usuario interesado en mantener una dieta saludable
+
 Quiero poder calcular mi ingesta calórica diaria recomendada utilizando la calculadora de salud
+
 Para planificar adecuadamente mi alimentación y controlar mi peso.
 
 Escenarios de aceptación:
