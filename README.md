@@ -81,3 +81,37 @@ A continuación, insertamos una imagen en la que se representa un diagrama de ca
 * Extensiones:
   - El sistema podría ofrecer recomendaciones adicionales, como sugerencias para distribuir las calorías diarias entre los diferentes macronutrientes (proteínas, carbohidratos y grasas) según los objetivos de salud del usuario.
   - También podría proporcionar información adicional sobre hábitos alimenticios saludables y sugerencias para alcanzar los objetivos de salud específicos del usuario.
+
+
+## PRÁCTICA 3
+
+### Historias de Usuario
+__HISTORIA DE USUARIO 1: Cálculo del Índice de Masa Corporal (IMC)__
+
+Como usuario interesado en conocer mi estado de salud relacionado con mi peso y altura
+
+Quiero poder calcular mi Índice de Masa Corporal (IMC) utilizando la calculadora de salud
+
+Para entender si mi peso está dentro de un rango saludable según mi altura
+
+Escenarios de aceptación:
+
+1. Dado que soy un hombre de 35 años, peso 80 kg y mido 175 cm, cuando ingreso estos datos en la calculadora, entonces debo recibir un resultado que estime mi IMC.
+2. Dado que soy una mujer de 28 años, peso 60 kg y mido 160 cm, cuando ingreso estos datos en la calculadora, entonces debo recibir un resultado que estime mi IMC.
+3. Dado que intento calcular mi IMC y proporciono una altura negativa, la calculadora debe mostrar un mensaje de error indicando que la altura no puede ser negativa.
+
+__HISTORIA DE USUARIO 2: Cálculo de ingesta calórica diaria recomendada__
+
+Como usuario interesado en mantener una dieta saludable
+
+Quiero poder calcular mi ingesta calórica diaria recomendada utilizando la calculadora de salud
+
+Para planificar adecuadamente mi alimentación y controlar mi peso.
+
+Escenarios de aceptación:
+
+1. Dado que soy un hombre de 30 años, peso 80 kg y mido 175 cm, cuando ingreso estos datos en la calculadora, debo recibir un resultado que estime mi ingesta calórica diaria recomendada.
+2. Dado que soy una mujer de 25 años, peso 60 kg y mido 160 cm, cuando ingreso estos datos en la calculadora, debo recibir un resultado que estime mi ingesta calórica diaria recomendada.
+3. Dado que intento calcular mi ingesta calórica diaria recomendada y proporciono una altura negativa, la calculadora debe mostrar un mensaje de error indicando que la altura no puede ser negativa.
+4. Dado que intento calcular mi ingesta calórica diaria recomendada y proporciono un peso negativo, la calculadora debe mostrar un mensaje de error indicando que el peso no puede ser negativo.
+5. Dado que intento calcular mi ingesta calórica diaria recomendada y proporciono una edad negativa, la calculadora debe mostrar un mensaje de error indicando que la edad no puede ser negativa.
