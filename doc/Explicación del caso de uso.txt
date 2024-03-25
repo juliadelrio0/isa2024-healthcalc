@@ -1,0 +1,26 @@
+Explicación del caso de uso "Calcular Ingesta Calórica Diaria Recomendada"
+
+* Nombre: Calcular Ingesta Calórica Diaria Recomendada
+* Actor principal: Usuario
+* Ámbito: Sistema de la calculadora de salud
+* Nivel: Nivel de usuario
+* Stakeholders e intereses:
+  - Usuario: Interesado en conocer la cantidad de calorías que debe consumir diariamente para mantener su peso o alcanzar sus objetivos de salud.
+  - Desarrolladores: Interesados en implementar y mantener correctamente esta funcionalidad en el sistema.
+* Precondiciones:
+  - El usuario debe tener acceso al sistema de la calculadora de salud.
+  - El usuario debe proporcionar su información personal, como peso, altura, edad, género y nivel de actividad física.
+* Garantías mínimas: El sistema debe realizar el cálculo correctamente según las fórmulas establecidas para estimar la ingesta calórica diaria recomendada.
+* Garantía de éxito: El sistema proporcionará al usuario la cantidad de calorías que debe consumir diariamente de manera precisa y confiable, teniendo en cuenta sus características individuales y objetivos de salud.
+* Escenario principal:
+  1. El usuario ingresa su peso en kilogramos.
+  2. El usuario ingresa su altura en metros.
+  3. El usuario ingresa su edad en años.
+  4. El usuario selecciona su género (hombre o mujer).
+  5. El usuario selecciona su nivel de actividad física (sedentario, poco activo, moderadamente activo, muy activo o extremadamente activo).
+  6. El sistema calcula la ingesta calórica diaria recomendada utilizando la fórmula correspondiente, que puede basarse en la tasa metabólica basal (TMB) y el nivel de actividad física del usuario.
+  7. El sistema muestra al usuario el resultado del cálculo.
+* Escenarios alternativos: Si el usuario proporciona valores no válidos para alguna de las variables, el sistema mostrará un mensaje de error y solicitará al usuario que proporcione valores válidos.
+* Extensiones:
+  - El sistema podría ofrecer recomendaciones adicionales, como sugerencias para distribuir las calorías diarias entre los diferentes macronutrientes (proteínas, carbohidratos y grasas) según los objetivos de salud del usuario.
+  - También podría proporcionar información adicional sobre hábitos alimenticios saludables y sugerencias para alcanzar los objetivos de salud específicos del usuario.

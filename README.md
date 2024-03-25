@@ -1,6 +1,8 @@
 # HEALTH CALCULATOR JULIA DEL RÍO
 
-## Tests método 'HealthCalcImpl.idealWeight'
+## PRÁCTICA 1
+
+### Tests método 'HealthCalcImpl.idealWeight'
 
 A continuación, inserto una enumerción de los casos de prueba que he considerado convenientes realizar para comprobar el correcto funcionamiento del método idealWeight.
 
@@ -12,7 +14,7 @@ A continuación, inserto una enumerción de los casos de prueba que he considera
 6. **Test Peso Ideal Hombre**: Comprueba el cálculo correcto del peso ideal basándose en la fórmula para el género masculino y confirmando que el resultado coincide con el esperado.
 7. **Test Peso Ideal Mujer**: Este test sirve para lo mismo que el anterior solo que ahora estudiamos el caso del género femenino.
 
-## Tests método 'HealthCalcImpl.basalMetabolicRate'
+### Tests método 'HealthCalcImpl.basalMetabolicRate'
 
 En este otro apartado, se incluye otra lista de los casos de prueba para comprobar el funcionamiento del método basalMetabolicRate.
 
@@ -31,15 +33,51 @@ En este otro apartado, se incluye otra lista de los casos de prueba para comprob
 13. **Test Metabolismo Basal Mujer**: Cálculo correcto del metabolismo basal para una mujer.
 14. **Test Metabolismo Basal Hombre**: Cálculo correcto del metabolismo basal para un hombre.
 
-## Resultado de los test
+### Resultado de los test
 
 En este apartado, voy a añadir una captura de mi consola en la que se puede observar que todos los test mencionados anteriormente se ejecutaron correctamente.
 
 ![Resultado de los tests](/resultadoTests.jpg)
 
-## Registro de commits
+### Registro de commits
 
 Por último, tal y como se nos pide en la última parte de la práctica, adjunto una imagen donde podemos ver el registro de los commits que he realizado durante el desarrollo de dicha práctica.
 Cabe destacar que hay más commits de la cuenta para insertar la primera imagen puesto que no me salía bien y lo he intentado muchas veces.
 
 ![Registro de los commits](/registroCommits.jpg)
+
+
+## PRÁCTICA 2
+
+### Diagrama Casos de Uso
+
+A continuación, insertamos una imagen en la que se representa un diagrama de casos de uso de este proyecto.
+
+![Diagrama de Casos de Uso](doc/pract2CasosUso.png)
+
+### Explicación del caso de uso "Calcular Ingesta Calórica Diaria Recomendada"
+
+* Nombre: Calcular Ingesta Calórica Diaria Recomendada
+* Actor principal: Usuario
+* Ámbito: Sistema de la calculadora de salud
+* Nivel: Nivel de usuario
+* Stakeholders e intereses:
+  - Usuario: Interesado en conocer la cantidad de calorías que debe consumir diariamente para mantener su peso o alcanzar sus objetivos de salud.
+  - Desarrolladores: Interesados en implementar y mantener correctamente esta funcionalidad en el sistema.
+* Precondiciones:
+  - El usuario debe tener acceso al sistema de la calculadora de salud.
+  - El usuario debe proporcionar su información personal, como peso, altura, edad, género y nivel de actividad física.
+* Garantías mínimas: El sistema debe realizar el cálculo correctamente según las fórmulas establecidas para estimar la ingesta calórica diaria recomendada.
+* Garantía de éxito: El sistema proporcionará al usuario la cantidad de calorías que debe consumir diariamente de manera precisa y confiable, teniendo en cuenta sus características individuales y objetivos de salud.
+* Escenario principal:
+  1. El usuario ingresa su peso en kilogramos.
+  2. El usuario ingresa su altura en metros.
+  3. El usuario ingresa su edad en años.
+  4. El usuario selecciona su género (hombre o mujer).
+  5. El usuario selecciona su nivel de actividad física (sedentario, poco activo, moderadamente activo, muy activo o extremadamente activo).
+  6. El sistema calcula la ingesta calórica diaria recomendada utilizando la fórmula correspondiente, que puede basarse en la tasa metabólica basal (TMB) y el nivel de actividad física del usuario.
+  7. El sistema muestra al usuario el resultado del cálculo.
+* Escenarios alternativos: Si el usuario proporciona valores no válidos para alguna de las variables, el sistema mostrará un mensaje de error y solicitará al usuario que proporcione valores válidos.
+* Extensiones:
+  - El sistema podría ofrecer recomendaciones adicionales, como sugerencias para distribuir las calorías diarias entre los diferentes macronutrientes (proteínas, carbohidratos y grasas) según los objetivos de salud del usuario.
+  - También podría proporcionar información adicional sobre hábitos alimenticios saludables y sugerencias para alcanzar los objetivos de salud específicos del usuario.
