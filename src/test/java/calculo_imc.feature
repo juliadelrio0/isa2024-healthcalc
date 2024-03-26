@@ -1,15 +1,34 @@
-Feature: Cálculo del Índice de Masa Corporal (IMC)
+@tag
+Feature: Basal Metabolic Rate Calculation
 
-  Scenario: Cálculo del IMC para un hombre
-    Given que soy un hombre de 35 años, peso 80 kg y mido 175 cm
-    When ingreso estos datos en la calculadora
-    Then debo recibir un resultado que estime mi IMC
+  @tag1
+  Scenario Outline: Calculate the basal metabolic rate with valid input
+    Given I am a man
+    When I enter <weight>, <age>, <height> and "<gender>"  into the calculator
+    Then I must receive a result that estimates my <expected_bmi>
 
-  Scenario: Cálculo del IMC para una mujer
-    Given que soy una mujer de 28 años, peso 60 kg y mido 160 cm
-    When ingreso estos datos en la calculadora
-    Then debo recibir un resultado que estime mi IMC
+    Examples:
+        | weight | age | height | gender | expected_bmi |
+        | 80     | 35  | 175    | h      | 26.07        |
 
-  Scenario: Altura negativa
-    Given intento calcular mi IMC y proporciono una altura negativa
-    Then la calculadora debe mostrar un mensaje de error indicando que la altura no puede ser negativa
+  @tag2
+  Scenario Outline: Calculate the basal metabolic rate with valid input
+    Given I am a woman
+    When I enter <weight>, <age>, <height> and "<gender>"  into the calculator
+    Then I must receive a result that estimates my <expected_bmi>
+
+    Examples:
+        | weight | age | height | gender | expected_bmi |
+        | 60     | 28  | 160    | m      | 23.44        |
+
+  @tag3
+  Scenario Outline: Display error when input parameter is incorrect
+    Given I am a nutritionist 
+    When I enter <weight>, <age>, <height> and "<gender>" into the calculator
+    Then the calculator should display an error message stating the height cannot be negative
+
+    Examples:
+        | weight | age | height | gender | error |
+        | 60     | 28  | 160    | m      | false |
+        | 80     | 30  | 178    | h      | false |
+        | 75     | 23  | -125   | m      | true  |

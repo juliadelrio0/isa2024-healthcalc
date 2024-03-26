@@ -1,23 +1,58 @@
-Feature: Cálculo de ingesta calórica diaria recomendada
+@tag
+Feature: Calculation of recommended daily caloric intake
 
-  Scenario: Cálculo de ingesta calórica para un hombre
-    Given que soy un hombre de 30 años, peso 80 kg y mido 175 cm
-    When ingreso estos datos en la calculadora
-    Then debo recibir un resultado que estime mi ingesta calórica diaria recomendada
+  @tag1
+  Scenario Outline: Calculation of calorie intake for a man
+    Given I am a man
+    When I enter <weight>, <age>, <height> and "<gender>"  into the calculator
+    Then I must receive a result that estimates my <recommended_daily_caloric>
 
-  Scenario: Cálculo de ingesta calórica para una mujer
-    Given que soy una mujer de 25 años, peso 60 kg y mido 160 cm
-    When ingreso estos datos en la calculadora
-    Then debo recibir un resultado que estime mi ingesta calórica diaria recomendada
+    Examples:
+        | weight | age | height | gender | recommended_daily_caloric |
+        | 80     | 30  | 175    | h      | 1829.137                  |
 
-  Scenario: Altura negativa
-    Given intento calcular mi ingesta calórica diaria recomendada y proporciono una altura negativa
-    Then la calculadora debe mostrar un mensaje de error indicando que la altura no puede ser negativa
+  @tag2
+  Scenario Outline: Calculation of calorie intake for a woman
+    Given I am a woman
+    When I enter <weight>, <age>, <height> and "<gender>"  into the calculator
+    Then I must receive a result that estimates my <recommended_daily_caloric>
 
-  Scenario: Peso negativo
-    Given intento calcular mi ingesta calórica diaria recomendada y proporciono un peso negativo
-    Then la calculadora debe mostrar un mensaje de error indicando que el peso no puede ser negativo
+    Examples:
+        | weight | age | height | gender | recommended_daily_caloric |
+        | 60     | 25  | 160    | m      | 1389.843                  |
 
-  Scenario: Edad negativa
-    Given intento calcular mi ingesta calórica diaria recomendada y proporciono una edad negativa
-    Then la calculadora debe mostrar un mensaje de error indicando que la edad no puede ser negativa
+  @tag3
+  Scenario Outline: Negative height
+    Given I am a nutritionist
+    When I enter <weight>, <age>, <height> and "<gender>"  into the calculator
+    Then the calculator should display an error message
+
+    Examples:
+        | weight | age | height | gender | error |
+        | 60     | 28  | 160    | m      | false |
+        | 80     | 30  | 178    | h      | false |
+        | 75     | 23  | -125   | m      | true  |
+
+  @tag4
+  Scenario Outline: Negative weight
+    Given I am a nutritionist
+    When I enter <weight>, <age>, <height> and "<gender>"  into the calculator
+    Then the calculator should display an error message
+
+    Examples:
+        | weight | age | height | gender | error |
+        | 60     | 28  | 160    | m      | false |
+        | -80    | 30  | 178    | h      | true  |
+        | 75     | 23  | 163    | m      | false |
+
+  @tag5
+  Scenario Outline: Negative age
+    Given I am a nutritionist
+    When I enter <weight>, <age>, <height> and "<gender>"  into the calculator
+    Then the calculator should display an error message
+
+    Examples:
+        | weight | age | height | gender | error |
+        | 60     | -28 | 160    | m      | true  |
+        | 80     | 30  | 178    | h      | false |
+        | 75     | 23  | 163    | m      | false |
