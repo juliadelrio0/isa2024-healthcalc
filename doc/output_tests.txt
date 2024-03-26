@@ -12,7 +12,7 @@
 [INFO] Nothing to compile - all classes are up to date
 [INFO] 
 [INFO] --- resources:3.3.1:testResources (default-testResources) @ HealthCalc ---
-[INFO] skip non existing resourceDirectory C:\Users\julia\OneDrive\Escritorio\UNIVERSIDAD\TERCERO\INGENIERÍA DEL SOFTWARE AVANZADA\isa2024-healthcalc\src\test\resources
+[INFO] Copying 2 resources from src\test\resources to target\test-classes
 [INFO] 
 [INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ HealthCalc ---
 [INFO] Nothing to compile - all classes are up to date
@@ -24,7 +24,7 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running Tests para la calculadora de salud.
-[INFO] Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.056 s -- in Tests para la calculadora de salud.
+[INFO] Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.094 s -- in Tests para la calculadora de salud.
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -33,6 +33,6 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.445 s
-[INFO] Finished at: 2024-03-25T14:25:39+01:00
+[INFO] Total time:  2.476 s
+[INFO] Finished at: 2024-03-26T11:55:13+01:00
 [INFO] ------------------------------------------------------------------------
