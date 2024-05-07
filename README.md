@@ -115,3 +115,12 @@ Escenarios de aceptación:
 3. Dado que intento calcular mi ingesta calórica diaria recomendada y proporciono una altura negativa, la calculadora debe mostrar un mensaje de error indicando que la altura no puede ser negativa.
 4. Dado que intento calcular mi ingesta calórica diaria recomendada y proporciono un peso negativo, la calculadora debe mostrar un mensaje de error indicando que el peso no puede ser negativo.
 5. Dado que intento calcular mi ingesta calórica diaria recomendada y proporciono una edad negativa, la calculadora debe mostrar un mensaje de error indicando que la edad no puede ser negativa.
+
+
+## PRÁCTICA 4: INTERFAZ GRÁFICA DE USUARIO
+
+El boceto seguido para el diseño de la interfaz gráfica es el siguiente:
+![Boceto](doc/Boceto.png)
+
+Y lo obtenido ha sido:
+![Interfaz](doc/Interfaz.png)
