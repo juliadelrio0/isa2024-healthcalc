@@ -123,4 +123,34 @@ El boceto seguido para el diseño de la interfaz gráfica es el siguiente:
 ![Boceto](doc/Boceto.png)
 
 Y lo obtenido ha sido:
+
 ![Interfaz](doc/Interfaz.png)
+
+
+## PRÁCTICA 6: PATRONES DE DISEÑO
+
+A continuación, se adjunta una imagen del diagrama UML obtenido en cada apartado de la práctica junto con la especificación del patrón de diseño utilizado.
+
+__APARTADO 2__
+
+En este apartado, como se indica en él, se ha utilizado el patrón *Singleton*.
+
+![diagrama2](design_patterns/diagramaApartado2.png)
+
+__APARTADO 3A__
+
+En este otro, se ha implementado el patrón *Adapter*, tal y como se puede observar a continuación.
+
+![diagrama3a](design_patterns/diagramaApartado3A.png)
+
+__APARTADO 3B__
+
+Ahora hemos usado el *Proxy*.
+
+![diagrama3b](design_patterns/diagramaApartadoB.png)
+
+__APARTADO 3C__
+
+Y, por último, en este se ha usado el patrón *Decorator*.
+
+![diagrama3c](design_patterns/diagramaApartado3C.png)
