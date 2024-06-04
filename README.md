@@ -154,3 +154,65 @@ __APARTADO 3C__
 Y, por último, en este se ha usado el patrón *Decorator*.
 
 ![diagrama3c](design_patterns/diagramaApartado3C.png)
+
+
+## PRÁCTICA 7: REFACTORINGS
+__1. Sustitución del tipo char para Género por un ENUM__
+
+Identificación del problema
+---------------------------
+
+*Bad Smell*: Type Tests.
+
+*Refactoring*: Replace Type Code with Class.
+
+*Categoría*: Attribute Refactoring.
+
+*Descripción*: Se ha reemplazado el uso de caracteres para representar el género ('M', 'F') por una Enumeración Gender con dos estados posibles: MALE y FEMALE. Este cambio elimina la necesidad de realizar comprobaciones de tipo y comparaciones de caracteres a lo largo del código, centralizando la lógica de género en una única estructura de datos y permitiendo el uso de características orientadas a objetos para manejar diferencias basadas en el género de manera más robusta.
+
+*Número de cambios manuales*: 10 clases modificadas (todas) y 1 clase enumerado nueva añadida.
+  
+Aplicar el refactoring
+  - Crear una enumeración Gender.
+  - Modificar el uso de char en todas las clases afectadas.
+  - Modificar la vista para devolver el género correcto.
+
+
+__2. Sustitución de los atributos individuales height, weight, age y gender por una clase Person__
+
+Identificación del problema
+---------------------------
+
+*Bad Smell*: Data Clumbs.
+
+*Refactoring*: Encapsulate Data y Move Method.
+
+*Categoría*: Class Refactoring.
+
+*Descripción*: Se han agrupado los datos de altura, peso, edad y género en una única clase PersonImpl y se ha modificado el código para que las funciones y métodos usen instancias de esta clase en lugar de pasar múltiples parámetros. Este cambio facilita la gestión de datos relacionados y mejora la cohesión del código.
+
+*Número de cambios manuales*: 5 clases modificadas (HealthCalculator, HealthHospitalAdapter, Controlador, Modelo, HealthStatsProxy) y 1 clase y 1 interfaz nuevas añadidas.
+  
+Aplicar el refactoring
+  - Crear la interfaz Person y su implementación PersonImpl.
+  - Modificar las clases para usar PersonImpl en lugar de atributos individuales..
+
+
+__3. Crear las interfaces CardiovascularMetrics y MetabolicMetrics__
+
+Identificación del problema
+---------------------------
+
+*Bad Smell*: Divergent Change.
+
+*Refactoring*: Extract Interface.
+
+*Categoría*: Class Refactoring.
+
+*Descripción*: Se han creado las interfaces CardiovascularMetrics y MetabolicMetrics para separar las responsabilidades de cálculo de métricas cardiovasculares y metabólicas. Este cambio mejora la cohesión y facilita la futura ampliación o modificación de estas funcionalidades sin afectar al resto del sistema.
+
+*Número de cambios manuales*: 9 clases modificadas y 2 interfaces nuevas añadidas.
+
+Aplicar el refactoring
+  - Crear las interfaces CardiovascularMetrics y MetabolicMetrics.
+  - Implementar las interfaces en las clases necesarias.
