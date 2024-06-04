@@ -46,7 +46,7 @@ public class Controlador {
 				double altura = Double.parseDouble(vista.getAltura());
 				int edad = Integer.parseInt(vista.getEdad());
 				Gender genero = vista.getGenero();
-				PersonImpl person = new PersonImpl((float) altura, (float) peso, edad, genero);
+				PersonImpl person = new PersonImpl((float) peso, (float) altura, edad, genero);
 				double tmb;
 				try {
 					tmb = modelo.basalMetabolicRate(person);
