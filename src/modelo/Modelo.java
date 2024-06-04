@@ -1,6 +1,7 @@
 package modelo;
 
 import hospital.Gender;
+import hospital.Person;
 
 public class Modelo {
 
@@ -17,22 +18,22 @@ public class Modelo {
 		return instancia;
 	}
 	
-	public double calcularPesoIdeal(double altura, Gender genero) {
+	public double calcularPesoIdeal(Person person) {
 		double pesoIdeal = 0.0;
-		if (genero == Gender.MALE) {
-			pesoIdeal = altura - 100 - ((altura - 150) / 4);
-		} else if (genero == Gender.FEMALE) {
-			pesoIdeal = altura - 100 - ((altura - 150) / 2.5);
+		if (person.gender() == Gender.MALE) {
+			pesoIdeal = person.height() - 100 - ((person.height() - 150) / 4);
+		} else if (person.gender() == Gender.FEMALE) {
+			pesoIdeal = person.height() - 100 - ((person.height() - 150) / 2.5);
 		}
 		return pesoIdeal;
 	}
 	
-	public double calcularTMB(double peso, double altura, int edad, Gender genero) {
+	public double calcularTMB(Person person) {
 		double tmb = 0.0;
-		if (genero == Gender.MALE) {
-			tmb = (10 * peso) + (6.25 * altura) - (5 * edad) + 5;
-		} else if (genero == Gender.FEMALE) {
-			tmb = (10 * peso) + (6.25 * altura) - (5 * edad) - 161;
+		if (person.gender() == Gender.MALE) {
+			tmb = (10 * person.weight()) + (6.25 * person.height()) - (5 * person.age()) + 5;
+		} else if (person.gender() == Gender.FEMALE) {
+			tmb = (10 * person.weight()) + (6.25 * person.height()) - (5 * person.age()) - 161;
 		}
 		return tmb;
 	}

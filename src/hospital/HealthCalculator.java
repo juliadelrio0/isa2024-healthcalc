@@ -12,11 +12,13 @@ public class HealthCalculator implements HealthHospital {
 	
 	@Override
 	public double bmr(Gender genero, int edad, float altura, int peso) {
-		return modelo.calcularTMB(peso/1000, altura*100, edad, genero);
+		PersonImpl person = new PersonImpl((float) altura*100, (float) peso/1000, edad, genero);
+		return modelo.calcularTMB(person);
 	}
 	@Override
 	public int pesoIdeal(Gender genero, float altura) {
-		return (int) modelo.calcularPesoIdeal(altura*100, genero);
+		PersonImpl person = new PersonImpl((float) altura*100, genero);
+		return (int) modelo.calcularPesoIdeal(person);
 	}
 
 }

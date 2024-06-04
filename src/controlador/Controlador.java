@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import modelo.Modelo;
 import vista.Vista;
 import hospital.Gender;
+import hospital.PersonImpl;
 
 public class Controlador {
 	
@@ -24,8 +25,9 @@ public class Controlador {
 			if (vista.validarAltura()) {
 				Gender genero = vista.getGenero();
 				double altura = Double.parseDouble(vista.getAltura());
-				double PesoIdeal = modelo.calcularPesoIdeal(altura, genero);
-				vista.setResultadoPesoIdeal(String.format("%.2f", PesoIdeal, null));
+				PersonImpl person = new PersonImpl((float) altura, genero);
+				double PesoIdeal = modelo.calcularPesoIdeal(person);
+				vista.setResultadoPesoIdeal(String.format("%.2f", PesoIdeal));
 			} else {
 				vista.mostrarError("Por favor, introduzca valores válidos para peso y/o altura.");
 			}
@@ -39,7 +41,8 @@ public class Controlador {
 				double altura = Double.parseDouble(vista.getAltura());
 				int edad = Integer.parseInt(vista.getEdad());
 				Gender genero = vista.getGenero();
-				double tmb = modelo.calcularTMB(peso, altura, edad, genero);
+				PersonImpl person = new PersonImpl((float) altura, (float) peso, edad, genero);
+				double tmb = modelo.calcularTMB(person);
 				vista.setResultadoTMB(String.format("%.2f", tmb));
 			} else {
 				vista.mostrarError("Por favor, introduzca valores válidos para peso, altura y/o edad.");

@@ -48,7 +48,7 @@ public class HealthStatsProxy implements HealthStats {
 	public float bmrMedio() {
 		float suma = 0;
 		for (int i = 0; i < generos.size(); i++) {
-			suma += modelo.calcularTMB(pesos.get(i)/1000, alturas.get(i)*100, edades.get(i), generos.get(i));
+			suma += modelo.calcularTMB(new PersonImpl(pesos.get(i)/1000, alturas.get(i)*100, edades.get(i), generos.get(i)));
 		}
 		return suma/generos.size();
 	}
