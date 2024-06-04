@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 
 import modelo.Modelo;
 import vista.Vista;
+import hospital.Gender;
 
 public class Controlador {
 	
@@ -13,7 +14,7 @@ public class Controlador {
 	
 	public Controlador(Vista vista, Modelo modelo) {
 		this.vista = vista;
-		this.modelo = new Modelo();
+		this.modelo = Modelo.getInstancia();
 		this.vista.addCalcularPesoIdealListener(new CalcularPesoIdealListener());
 		this.vista.addCalcularTMBListener(new CalcularTMBListener());
 	}
@@ -21,7 +22,7 @@ public class Controlador {
 	class CalcularPesoIdealListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			if (vista.validarAltura()) {
-				String genero = vista.getGenero();
+				Gender genero = vista.getGenero();
 				double altura = Double.parseDouble(vista.getAltura());
 				double PesoIdeal = modelo.calcularPesoIdeal(altura, genero);
 				vista.setResultadoPesoIdeal(String.format("%.2f", PesoIdeal, null));
@@ -37,7 +38,7 @@ public class Controlador {
 				double peso = Double.parseDouble(vista.getPeso());
 				double altura = Double.parseDouble(vista.getAltura());
 				int edad = Integer.parseInt(vista.getEdad());
-				String genero = vista.getGenero();
+				Gender genero = vista.getGenero();
 				double tmb = modelo.calcularTMB(peso, altura, edad, genero);
 				vista.setResultadoTMB(String.format("%.2f", tmb));
 			} else {

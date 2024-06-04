@@ -2,11 +2,11 @@ package hospital;
 
 public class AmericanHealthCalculatorDecorator extends HealthCalculator {
 	
-	public int pesoIdeal(char genero, float altura) {
+	public int pesoIdeal(Gender genero, float altura) {
 		return super.pesoIdeal(genero, altura);
 	}
 	
-	public double bmr(char genero, int edad, float altura, int peso) {
+	public double bmr(Gender genero, int edad, float altura, int peso) {
 		float alturaM = altura*0.3048f;
 		int pesoKG = (int) (peso*0.453592);
 		double bmr = super.bmr(genero, edad, alturaM, pesoKG);

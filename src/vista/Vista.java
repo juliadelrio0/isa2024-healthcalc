@@ -12,6 +12,7 @@ import java.awt.event.ActionListener;
 import javax.swing.SwingConstants;
 
 import controlador.Controlador;
+import hospital.Gender;
 import modelo.Modelo;
 
 import javax.swing.JTextField;
@@ -39,7 +40,7 @@ public class Vista {
 			public void run() {
 				try {
 					Vista window = new Vista();
-					Modelo modelo = new Modelo();
+					Modelo modelo = Modelo.getInstancia();
 					Controlador controlador = new Controlador(window, modelo);
 					window.frame.setVisible(true);
 				} catch (Exception e) {
@@ -199,8 +200,12 @@ public class Vista {
 		return textFieldEdad.getText();
 	}
 	
-	public String getGenero() {
-		return comboBoxGenero.getSelectedItem().toString();
+	public Gender getGenero() {
+		if (comboBoxGenero.getSelectedItem().toString() == "Masculino") {
+			return Gender.MALE;
+		} else {
+			return Gender.FEMALE;
+		}
 	}
 	
 	public void setResultadoPesoIdeal(String resultado) {

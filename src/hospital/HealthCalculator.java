@@ -11,12 +11,12 @@ public class HealthCalculator implements HealthHospital {
 	}
 	
 	@Override
-	public double bmr(char genero, int edad, float altura, int peso) {
-		return modelo.calcularTMB(peso/1000, altura*100, edad, (genero == 'M') ? "Masculino" : "Femenino");
+	public double bmr(Gender genero, int edad, float altura, int peso) {
+		return modelo.calcularTMB(peso/1000, altura*100, edad, genero);
 	}
 	@Override
-	public int pesoIdeal(char genero, float altura) {
-		return (int) modelo.calcularPesoIdeal(altura*100, (genero == 'M') ? "Masculino" : "Feminino");
+	public int pesoIdeal(Gender genero, float altura) {
+		return (int) modelo.calcularPesoIdeal(altura*100, genero);
 	}
 
 }

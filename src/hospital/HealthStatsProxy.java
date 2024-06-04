@@ -7,7 +7,7 @@ import modelo.Modelo;
 public class HealthStatsProxy implements HealthStats {
 	
 	private Modelo modelo;
-	private List<String> generos;
+	private List<Gender> generos;
 	private List<Float> alturas;
 	private List<Integer> edades;
 	private List<Integer> pesos;
@@ -55,8 +55,8 @@ public class HealthStatsProxy implements HealthStats {
 	
 	public int numSexoH() {
 		int cont = 0;
-		for (String genero : generos) {
-			if (genero.equals("Masculino")) {
+		for (Gender genero : generos) {
+			if (genero.equals(Gender.MALE)) {
 				cont++;
 			}
 		}
@@ -65,8 +65,8 @@ public class HealthStatsProxy implements HealthStats {
 	
 	public int numSexoM() {
 		int cont = 0;
-		for (String genero : generos) {
-			if (genero.equals("Femenino")) {
+		for (Gender genero : generos) {
+			if (genero.equals(Gender.FEMALE)) {
 				cont++;
 			}
 		}
@@ -77,7 +77,7 @@ public class HealthStatsProxy implements HealthStats {
 		return generos.size();
 	}
 	
-	public void agregarPaciente(String genero, float altura, int edad, int peso) {
+	public void agregarPaciente(Gender genero, float altura, int edad, int peso) {
 		generos.add(genero);
 		alturas.add(altura);
 		edades.add(edad);
