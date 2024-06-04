@@ -26,8 +26,13 @@ public class Controlador {
 				Gender genero = vista.getGenero();
 				double altura = Double.parseDouble(vista.getAltura());
 				PersonImpl person = new PersonImpl((float) altura, genero);
-				double PesoIdeal = modelo.calcularPesoIdeal(person);
-				vista.setResultadoPesoIdeal(String.format("%.2f", PesoIdeal));
+				double PesoIdeal;
+				try {
+					PesoIdeal = modelo.getIdealBodyWeight(person);
+					vista.setResultadoPesoIdeal(String.format("%.2f", PesoIdeal));
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				}
 			} else {
 				vista.mostrarError("Por favor, introduzca valores válidos para peso y/o altura.");
 			}
@@ -42,8 +47,13 @@ public class Controlador {
 				int edad = Integer.parseInt(vista.getEdad());
 				Gender genero = vista.getGenero();
 				PersonImpl person = new PersonImpl((float) altura, (float) peso, edad, genero);
-				double tmb = modelo.calcularTMB(person);
-				vista.setResultadoTMB(String.format("%.2f", tmb));
+				double tmb;
+				try {
+					tmb = modelo.basalMetabolicRate(person);
+					vista.setResultadoTMB(String.format("%.2f", tmb));
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				}
 			} else {
 				vista.mostrarError("Por favor, introduzca valores válidos para peso, altura y/o edad.");
 			}

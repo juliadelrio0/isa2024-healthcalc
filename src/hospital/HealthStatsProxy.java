@@ -45,10 +45,10 @@ public class HealthStatsProxy implements HealthStats {
 		return suma/edades.size();
 	}
 	
-	public float bmrMedio() {
+	public float bmrMedio() throws Exception {
 		float suma = 0;
 		for (int i = 0; i < generos.size(); i++) {
-			suma += modelo.calcularTMB(new PersonImpl(pesos.get(i)/1000, alturas.get(i)*100, edades.get(i), generos.get(i)));
+			suma += modelo.basalMetabolicRate(new PersonImpl(pesos.get(i)/1000, alturas.get(i)*100, edades.get(i), generos.get(i)));
 		}
 		return suma/generos.size();
 	}

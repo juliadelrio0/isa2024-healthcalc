@@ -11,14 +11,14 @@ public class HealthCalculator implements HealthHospital {
 	}
 	
 	@Override
-	public double bmr(Gender genero, int edad, float altura, int peso) {
+	public double bmr(Gender genero, int edad, float altura, int peso) throws Exception {
 		PersonImpl person = new PersonImpl((float) altura*100, (float) peso/1000, edad, genero);
-		return modelo.calcularTMB(person);
+		return modelo.basalMetabolicRate(person);
 	}
 	@Override
-	public int pesoIdeal(Gender genero, float altura) {
+	public int pesoIdeal(Gender genero, float altura) throws Exception {
 		PersonImpl person = new PersonImpl((float) altura*100, genero);
-		return (int) modelo.calcularPesoIdeal(person);
+		return (int) modelo.getIdealBodyWeight(person);
 	}
 
 }

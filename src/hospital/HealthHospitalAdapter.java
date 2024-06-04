@@ -10,15 +10,15 @@ public class HealthHospitalAdapter implements HealthHospital {
 		modelo = Modelo.getInstancia();
 	}
 	
-	public double bmr(Gender genero, int edad, float altura, int peso) {
+	public double bmr(Gender genero, int edad, float altura, int peso) throws Exception {
 		float alturaCM = altura*100;
 		float pesoKG = peso/1000;
-		return modelo.calcularTMB(new PersonImpl(pesoKG, alturaCM, edad, genero));
+		return modelo.basalMetabolicRate(new PersonImpl(pesoKG, alturaCM, edad, genero));
 	}
 	
-	public int pesoIdeal(Gender genero, float altura) {
+	public int pesoIdeal(Gender genero, float altura) throws Exception {
 		float alturaCM = altura*100;
-		return (int) modelo.calcularPesoIdeal(new PersonImpl(alturaCM, genero));
+		return (int) modelo.getIdealBodyWeight(new PersonImpl(alturaCM, genero));
 	}
 
 }
